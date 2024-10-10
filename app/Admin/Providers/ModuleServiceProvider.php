@@ -16,7 +16,7 @@ class ModuleServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    const HOME = 'admin.home';
+    const HOME = 'admin.orders.index';
 
     /**
      * This namespace is applied to your controller routes.

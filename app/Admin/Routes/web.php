@@ -25,7 +25,7 @@ Route::namespace('App\Admin\Http\Controllers')->group(function () {
     Auth::routes();
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'log.activity'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('edit-profile', [ProfileController::class, 'editProfile'])->name('profile.edit-profile');
     Route::post('edit-profile', [ProfileController::class, 'updateProfile'])->name('profile.update-profile');
