@@ -18,7 +18,7 @@ header("Access-Control-Allow-Origin: *");
     <div class="form-group row">
         <div class="col-md-8">
             <input id="url" name="url" type="text" readonly
-                class="form-control" 
+                class="form-control"
                 value="https://www.amazon.com/s?k=graphics+card&crid=3GW7DYRQKYZP2&sprefix=gra%2Caps%2C261&ref=nb_sb_ss_ts-doa-p_1_3" autocomplete="off">
         </div>
         <div class="col-md-4">
@@ -48,11 +48,19 @@ header("Access-Control-Allow-Origin: *");
         $('#scrape').on('click', function (e) {
             e.preventDefault();
             const url = $('#url').val();
-                
+            let btn = $(this);
+            btn.html('<i class="fas fa-spinner fa-pulse"></i> Please Wait');
+            btn.attr('disabled', true);
             $.ajax({
                 url: "{{ route('admin.proxy') }}",
                 method: 'GET',
+                data:{
+                    url: url
+                },
                 success: function(data) {
+                    btn.html('Scrape');
+                    btn.attr('disabled', false);
+
                     const $html = $(data);
                     let products = [];
                     let name = '';
@@ -82,9 +90,11 @@ header("Access-Control-Allow-Origin: *");
                     document.body.appendChild(a);
                     a.click();
                     document.body.removeChild(a);
-                    URL.revokeObjectURL(url); 
+                    URL.revokeObjectURL(url);
                 },
                 error: function() {
+                    btn.html('Scrape');
+                    btn.attr('disabled', false);
                     $('#output').html('Error: Unable to fetch data.');
                 }
             });
