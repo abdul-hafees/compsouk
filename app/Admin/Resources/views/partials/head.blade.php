@@ -6,8 +6,8 @@
 
 <title>@yield('title') | {{ config('app.name') }}</title>
 
-<link rel="apple-touch-icon" href="{{ asset('assets/admin/images/favicon.png') }}">
-<link rel="shortcut icon" href="{{ asset('assets/admin/images/favicon.png') }}">
+<link rel="apple-touch-icon" href="{{ asset('assets/admin/images/icon.jpeg') }}">
+<link rel="shortcut icon" href="{{ asset('assets/admin/images/icon.jpeg') }}">
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="{{ mix('assets/admin/css/bootstrap.css') }}">

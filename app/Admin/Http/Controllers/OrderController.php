@@ -29,9 +29,10 @@ class OrderController extends Controller
                 ->filter(function ($query) {
                     if (request()->filled('filter.search')) {
                         $query->where(function ($query) {
-                            $query->where('order_date', 'like', "%" . request('filter.search') . "%")
-                                ->orWhere('order_date',request('filter.search'))
-                                ->orWhere('order_date',request('filter.search'));
+                            $query->where('shipping_address', 'like', "%" . request('filter.search') . "%")
+                                ->orWhere('billing_address', 'like', "%" . request('filter.search') . "%")
+                                ->orWhere('reference_number',request('filter.search'))
+                                ->orWhere('total_amount',request('filter.search'));
 
                         });
                     }

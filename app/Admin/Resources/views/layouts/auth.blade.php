@@ -22,7 +22,7 @@
             <div class="panel-body">
                 @section('header')
                     <div class="brand">
-                        <img class="brand-img" src="{{ asset('assets/admin/images/mted.png') }}" style="width: 200px" alt="mted">
+                        <img class="brand-img" src="{{ asset('assets/admin/images/icon.jpeg') }}" style="width: 200px" alt="icon">
 {{--                        <h2 class="brand-text font-size-18">{{ config('app.name') }} </h2>--}}
                     </div>
                 @show

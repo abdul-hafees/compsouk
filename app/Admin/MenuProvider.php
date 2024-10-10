@@ -55,7 +55,7 @@ class MenuProvider
             ],
             [
                 'label' => 'Orders',
-                'icon'  => 'fa fa-orders',
+                'icon'  => 'fa fa-shopping-cart',
                 'route' => 'admin.orders.index',
                 'sub_route_names' => ['admin.orders.create', 'admin.orders.edit'],
                 'visible' => function () {

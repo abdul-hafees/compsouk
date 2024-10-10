@@ -11,7 +11,7 @@
       <i class="icon wb-more-horizontal" aria-hidden="true"></i>
     </button>
     <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
-      <img class="navbar-brand-logo" src="{{ asset('assets/admin/images/mted-white.png') }}" title="Mted">
+      <img class="navbar-brand-logo" src="{{ asset('assets/admin/images/icon.jpeg') }}" title="Icon">
     </div>
 {{--    <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"--}}
 {{--      data-toggle="collapse">--}}

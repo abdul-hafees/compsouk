@@ -97,7 +97,7 @@
 @push('scripts')
 <script>
     $(function () {
-        @if($errors - > any() && Session::has('excel'))
+        @if($errors->any() && Session::has('excel'))
         $(document).ready(function () {
             {
                 {
