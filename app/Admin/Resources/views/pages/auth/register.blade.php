@@ -45,6 +45,6 @@
 
         <button type="submit" class="btn btn-primary btn-block btn-lg mt-40">Register</button>
     </form>
-    <p>Have account already? Please go to <a href="{{ route('login') }}">Sign In</a></p>
+    <p>Have account already? Please go to <a href="{{ route('admin.login') }}">Sign In</a></p>
 @endsection
 
