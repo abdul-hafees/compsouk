@@ -55,7 +55,7 @@ header("Access-Control-Allow-Origin: *");
                 url: "{{ route('admin.proxy') }}",
                 method: 'GET',
                 data:{
-                    url: url
+                    'url': url
                 },
                 success: function(data) {
                     btn.html('Scrape');
@@ -67,21 +67,20 @@ header("Access-Control-Allow-Origin: *");
                     let price = '';
 
                     $html.find('div[data-component-type="s-search-result"]').each(function() {
-                        name = $(this).find('h2 .a-text-normal').text().trim();
+                        name = $(this).find('h2 .a-text-normal').first().text().trim();
                         price = $(this).find('.a-price-whole').text().trim();
-                        console.log(name, price);
                         products.push({ name, price });
                     });
 
-                    let output = '<h2>Scraped Products:</h2><table class="table table-bordered"><tr><th>Name</th><th>Price</th></tr>';
+                    let output = '<h2>Scraped Products:</h2><table class="table table-bordered"><tr><th>Product Name</th><th>Price</th></tr>';
                     products.forEach(product => {
                         output += `<tr><td>${product.name} </td><td> ${product.price}</td></tr>`;
                     });
                     output += '</table>';
                     $('#output').html(output);
 
-                     // Download data to a .json file
-                    const jsonString = JSON.stringify(products, null, 2); // Format the JSON with 2 spaces for readability
+                    // download
+                    const jsonString = JSON.stringify(products, null, 2);
                     const blob = new Blob([jsonString], { type: 'application/json' });
                     const url = URL.createObjectURL(blob);
                     const a = document.createElement('a');
