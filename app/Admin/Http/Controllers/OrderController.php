@@ -185,4 +185,9 @@ class OrderController extends Controller
         }
     }
 
+    public function scrape()
+    {
+        return view('admin::pages.scrape');
+    }
+
 }

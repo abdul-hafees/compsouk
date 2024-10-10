@@ -63,6 +63,15 @@ class MenuProvider
                 }
             ],
 
+            [
+                'label' => 'Scrape Webpage',
+                'icon'  => 'fa fa-globe',
+                'route' => 'admin.scrape.index',
+                'visible' => function () {
+                    return true;
+                }
+            ],
+
 
 
         ];
