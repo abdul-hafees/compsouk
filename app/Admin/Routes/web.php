@@ -14,7 +14,6 @@
 use App\Admin\Http\Controllers\OrderController;
 use App\Admin\Http\Controllers\ProfileController;
 use App\Admin\Http\Controllers\ScrapeController;
-use App\Http\Controllers\HomeController;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -28,15 +27,15 @@ Route::namespace('App\Admin\Http\Controllers')->group(function () {
 });
 
 Route::middleware(['auth', 'log.activity'])->group(function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('edit-profile', [ProfileController::class, 'editProfile'])->name('profile.edit-profile');
     Route::post('edit-profile', [ProfileController::class, 'updateProfile'])->name('profile.update-profile');
     Route::get('change-password', [ProfileController::class, 'changePassword'])->name('profile.change-password');
     Route::post('change-password', [ProfileController::class, 'updatePassword'])->name('profile.update-password');
+
     Route::post('orders/import-excel', [OrderController::class, 'importOrders'])->name('orders.import-excel');
     Route::resource('orders', OrderController::class);
+
     Route::get('scrape', [ScrapeController::class, 'scrape'])->name('scrape.index');
     Route::get('proxy', [ScrapeController::class, 'proxy'])->name('proxy');
-
 });
 

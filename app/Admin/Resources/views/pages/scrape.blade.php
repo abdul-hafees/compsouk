@@ -22,7 +22,7 @@ header("Access-Control-Allow-Origin: *");
                 value="https://www.amazon.com/s?k=graphics+card&crid=3GW7DYRQKYZP2&sprefix=gra%2Caps%2C261&ref=nb_sb_ss_ts-doa-p_1_3" autocomplete="off">
         </div>
         <div class="col-md-4">
-        <button type="button" id="scrape" class="btn btn-primary">Scrape</button>
+        <button type="button" id="scrape" class="btn btn-primary">Scrape & Download JSON</button>
         </div>
     </div>
     </div>
@@ -90,6 +90,8 @@ header("Access-Control-Allow-Origin: *");
                     a.click();
                     document.body.removeChild(a);
                     URL.revokeObjectURL(url);
+
+                    toastr.success("JSON file downloaded successfully")
                 },
                 error: function() {
                     btn.html('Scrape');

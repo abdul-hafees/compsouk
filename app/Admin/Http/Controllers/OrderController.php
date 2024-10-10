@@ -178,7 +178,7 @@ class OrderController extends Controller
                 unlink($importedFilePath);
             }
 
-            return redirect()->back()->with('success', __('translation.data_imported_successfully'));
+            return redirect()->back()->with('success', 'Data imported successfully');
         } catch (\Exception $exception) {
             Session::put('excel', true);
             return redirect()->back()->with('error', $exception->getMessage());

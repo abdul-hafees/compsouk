@@ -7,8 +7,8 @@
 <div class="page-header-actions">
 
     <a class="btn btn-sm btn-secondary" href="#" data-toggle='modal' data-target='#excel-modal'>
-        <i class="icon fa fa-plus" aria-hidden="true"></i>
-        <span class="text hidden-sm-down">Import</span>
+        <i class="icon fa fa-download" aria-hidden="true"></i>
+        <span class="text hidden-sm-down">Import Excel</span>
     </a>
     <a class="btn btn-sm btn-primary" href="{{ route('admin.orders.create') }}">
         <i class="icon fa fa-plus" aria-hidden="true"></i>
@@ -98,14 +98,10 @@
 <script>
     $(function () {
         @if($errors->any() && Session::has('excel'))
-        $(document).ready(function () {
-            {
-                {
-                    Session::forget('excel')
-                }
-            }
-            $('#excel-modal').modal('show');
-        });
+            $(document).ready(function () {
+                {{ Session::forget('excel') }}
+                $('#excel-modal').modal('show');
+            });
         @endif
 
         var $table = $('#tbl-orders');

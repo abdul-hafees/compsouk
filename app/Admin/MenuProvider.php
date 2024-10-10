@@ -46,14 +46,6 @@ class MenuProvider
     public static function getMenu() {
         return [
             [
-                'label' => 'Dashboard',
-                'icon'  => 'wb-dashboard',
-                'route' => 'admin.home',
-                'visible' => function () {
-                    return true;
-                }
-            ],
-            [
                 'label' => 'Orders',
                 'icon'  => 'fa fa-shopping-cart',
                 'route' => 'admin.orders.index',

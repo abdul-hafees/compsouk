@@ -1230,7 +1230,7 @@ a.btn:not(.btn-link).active {
 .btn-outline.btn-primary.btn-up:active::before,
 .open > .btn-outline.btn-primary.btn-up.dropdown-toggle::before,
 .show > .btn-outline.btn-primary.btn-up.dropdown-toggle::before {
-  border-bottom-color: #3b997d;
+  border-bottom-color: #182bac;
 }
 
 .btn-outline-primary.btn-right::before,
@@ -2322,7 +2322,7 @@ a.btn:not(.btn-link).active {
 .btn-primary.btn-up.hover::before,
 .btn-primary.btn-up:focus::before,
 .btn-primary.btn-up.focus::before {
-  border-bottom-color: #3b997d;
+  border-bottom-color: #182bac;
 }
 
 .btn-primary.btn-up.active::before,
@@ -2340,7 +2340,7 @@ a.btn:not(.btn-link).active {
 .btn-primary.btn-right.hover::before,
 .btn-primary.btn-right:focus::before,
 .btn-primary.btn-right.focus::before {
-  border-left-color: #3b997d;
+  border-left-color: #182bac;
 }
 
 .btn-primary.btn-right.active::before,
@@ -2358,7 +2358,7 @@ a.btn:not(.btn-link).active {
 .btn-primary.btn-bottom.hover::before,
 .btn-primary.btn-bottom:focus::before,
 .btn-primary.btn-bottom.focus::before {
-  border-top-color: #3b997d;
+  border-top-color: #182bac;
 }
 
 .btn-primary.btn-bottom.active::before,
@@ -2376,7 +2376,7 @@ a.btn:not(.btn-link).active {
 .btn-primary.btn-left.hover::before,
 .btn-primary.btn-left:focus::before,
 .btn-primary.btn-left.focus::before {
-  border-right-color: #3b997d;
+  border-right-color: #182bac;
 }
 
 .btn-primary.btn-left.active::before,
@@ -2391,8 +2391,8 @@ a.btn:not(.btn-link).active {
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-  background-color: #3b997d;
-  border-color: #3b997d;
+  background-color: #182bac;
+  border-color: #182bac;
   box-shadow: none;
 }
 
@@ -4878,7 +4878,7 @@ fieldset[disabled] .btn-pure.focus {
 }
 
 .dropdown-menu-media > .dropdown-menu-footer > a:hover {
-  color: #3b997d !important;
+  color: #182bac !important;
   background-color: transparent !important;
 }
 
@@ -4888,7 +4888,7 @@ fieldset[disabled] .btn-pure.focus {
 }
 
 .dropdown-menu-media > .dropdown-menu-footer > .dropdown-menu-footer-btn:hover {
-  color: #3b997d !important;
+  color: #182bac !important;
   background-color: transparent !important;
 }
 
@@ -6785,7 +6785,7 @@ a .badge-pill:focus {
 
 .badge-primary[href]:hover,
 .badge-primary[href]:focus {
-  background-color: #3b997d;
+  background-color: #182bac;
 }
 
 .badge-primary.badge-outline {

@@ -29,7 +29,7 @@ class ProfileController extends Controller
         $admin->name = $request->get('name');
         $admin->save();
 
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.orders.index');
     }
 
     public function changePassword(){
@@ -63,6 +63,6 @@ class ProfileController extends Controller
 //            logger()->error($e->getMessage(), ['exception' => $e]);
 //        }
 
-        return redirect()->route('admin.home')->with('success', "Password updated");
+        return redirect()->route('admin.orders.index')->with('success', "Password updated");
     }
 }
